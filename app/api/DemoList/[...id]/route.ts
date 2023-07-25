@@ -9,8 +9,9 @@ export async function GET( request: Request,{params}:{params:{id:string}}){
         headers: {
             'Content-Type': 'application/json',
         },
+        next: { revalidate: 5 }, // Revalidate every 60 seconds
     })
     const data = await res.json()
-    
+    console.log(data)
     return NextResponse.json({ data })
 }
