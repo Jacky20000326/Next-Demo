@@ -1,0 +1,81 @@
+@import '../../../globals-variable-style.sass'
+.aboutContainer
+    background: linear-gradient($AboutPageBackgoundColor)
+    width: 100%
+    min-height: 80vh
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: center
+    position: relative
+    overflow: hidden
+
+    .aboutTitle
+        font-family: 'Limelight', cursive
+        font-size: 1.5rem
+
+    .aboutContent
+        font-family: 'Architects Daughter', cursive
+        font-size: 1.2rem
+        // max-width: 40%
+        text-align: center
+        margin-top: 2em
+        line-height: 2.5
+        .typeFirstLine
+            overflow: hidden
+            animation: typingFirstLineAni 1s steps(10)
+            animation-delay: 0s
+            animation-fill-mode: forwards
+            height: 30px
+            // border-right: 1px solid #000
+
+        .typeSecondLine
+            overflow: hidden
+            animation: typinSecondLineAni 1s steps(10)
+            height: 30px
+            animation-delay: 1s
+            animation-fill-mode: forwards
+            width: 0px
+
+    .aboutBtnGroup
+        display: flex
+        font-family: 'Inria Serif', serif
+        min-width: 20%
+        justify-content: space-between
+        margin-top: 3em
+        .welcome
+            @include Button_Style
+            padding: 15px
+        .Contact
+            @include Button_Style
+            padding: 15px
+    .decorationCircle1
+        position: absolute
+        width: 400px
+        height: 400px
+        box-shadow: -2px 4px 4px 0px rgba(0, 0, 0, 0.25)
+        background: linear-gradient($decorationBackgroundColor)
+        border-radius: 50%
+        top: 0px
+        right: -200px
+    .decorationCircle2
+        position: absolute
+        width: 400px
+        height: 400px
+        box-shadow: -2px 4px 4px 0px rgba(0, 0, 0, 0.25)
+        background: linear-gradient($decorationBackgroundColor)
+        border-radius: 50%
+        bottom: 0px
+        left: -200px
+
+@keyframes typingFirstLineAni
+    0%
+        width: 0%
+    100%
+        width: 100%
+
+@keyframes typinSecondLineAni
+    0%
+        width: 0%
+    100%
+        width: 100%

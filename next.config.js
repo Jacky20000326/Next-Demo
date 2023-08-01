@@ -2,8 +2,8 @@
 const nextConfig = {
     async headers() {
         return [
-          {
-            source: '/about',
+        {
+            source: '/api',
             headers: [
               {
                 key: 'x-custom-header',
