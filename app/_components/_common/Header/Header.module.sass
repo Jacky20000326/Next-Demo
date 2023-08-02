@@ -15,7 +15,10 @@
     height: 1px
     background-color: #000
     position: absolute
-
+.headerContainerScrollDown
+    background: rgba(255,255,255,0) !important
+    animation: scrollDownAni 0.8s  forwards !important
+    
 .headerContainer
     width: 100%
     min-height: 38px
@@ -27,6 +30,8 @@
     box-shadow: 0px 0px 30px -8px rgba(0, 0, 0, 0.25)
     font-family: 'Lakki Reddy', cursive
     z-index: 1
+    position: fixed
+    animation: scrollUpAni 0.8s  forwards
     .Logo
         position: absolute
         right: 50%
@@ -62,3 +67,15 @@
             @include afterStyle
             top: 40%
             right: -60%
+
+@keyframes scrollDownAni 
+    0%
+        transform: translateY(0%)
+    100%
+        transform: translateY(-100%)
+@keyframes scrollUpAni 
+    0%
+        transform: translateY(-100%)
+    100%
+        transform: translateY(0%)
+
