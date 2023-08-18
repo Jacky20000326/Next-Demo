@@ -1,0 +1,81 @@
+@import '../../../globals-variable-style.sass'
+
+@mixin afterStyle
+    content: ""
+    display: block
+    width: 1em
+    height: 1px
+    background-color: #000
+    position: absolute
+
+@mixin beforeStyle
+    content: ""
+    display: block
+    width: 1.2em
+    height: 1px
+    background-color: #000
+    position: absolute
+.headerContainerScrollDown
+    background: rgba(255,255,255,0) !important
+    animation: scrollDownAni 0.8s  forwards !important
+    
+.headerContainer
+    width: 100%
+    min-height: 38px
+    display: flex
+    align-items: center
+    position: relative
+    justify-content: end
+    background: $HeaderBackgorunfColor
+    box-shadow: 0px 0px 30px -8px rgba(0, 0, 0, 0.25)
+    font-family: 'Lakki Reddy', cursive
+    z-index: 1
+    position: fixed
+    animation: scrollUpAni 0.8s  forwards
+    .Logo
+        position: absolute
+        right: 50%
+        transform: translateX(50%)
+        font-size: 20px
+
+    .content
+        font-size: 1rem
+        margin-right: 5em
+        position: relative
+
+        // font-family: 'Lakki Reddy', cursive
+        &::after
+            @include afterStyle
+            top: 40%
+            left: -40%
+        &::before
+            @include afterStyle
+            top: 40%
+            right: -40%
+
+    .about
+        font-size: 1rem
+        margin-right: 5em
+        position: relative
+
+        color: $HeaderFontColor
+        &::after
+            @include afterStyle
+            top: 40%
+            left: -60%
+        &::before
+            @include afterStyle
+            top: 40%
+            right: -60%
+
+@keyframes scrollDownAni 
+    0%
+        transform: translateY(0%)
+    100%
+        transform: translateY(-100%)
+@keyframes scrollUpAni 
+    0%
+        transform: translateY(-100%)
+    100%
+        transform: translateY(0%)
+

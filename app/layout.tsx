@@ -1,7 +1,9 @@
-import "./globals.css";
+import "./globals.sass";
+import "./globals-variable-style.sass";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-
+import Header from "./_components/_common/Header/page";
+import Footer from "./_components/_common/Footer/page";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
@@ -16,7 +18,13 @@ export default function RootLayout({
 }) {
     return (
         <html lang="en">
-            <body className={inter.className}>{children}</body>
+            <body>
+                <Header />
+                {children}
+
+                <Footer />
+            </body>
         </html>
     );
 }
+//  Root layouts must contain html and body tags.

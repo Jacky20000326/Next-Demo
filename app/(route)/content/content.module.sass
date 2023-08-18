@@ -1,0 +1,25 @@
+@import '../../globals-variable-style.sass'
+.contentTitle
+    font-family: 'Limelight', cursive
+    font-size: 2rem
+    margin-top: 3em
+    position: relative
+    &::before
+        content: " "
+        display: block
+        position: absolute
+        background-color: #9f9f9f
+        width: 100px
+        height: 1px
+        top: 50%
+        left: -40%
+
+    &::after
+        content: " "
+        display: block
+        position: absolute
+        background-color: #9f9f9f
+        width: 100px
+        height: 1px
+        top: 50%
+        right: -40%
